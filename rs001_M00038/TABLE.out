@@ -1,0 +1,494 @@
+
+   HANDE
+
+ ================================================================
+Version information
+-------------------
+Version       | v1.5-718-g5daaf3a
+Commit hash   | 5daaf3a0d0718551889d4dff6cf7c92fe909290d
+Commit author | William Van Benschoten
+Commit date   | Wed Jul 17 08:29:51 2024 -0400
+Branch        | he/all-ueg-symms-fci
+
+Configuration and build information
+-----------------------------------
+Who compiled             | vanbenschoten
+Compilation hostname     | Williams-MacBook-Pro.local
+Operating system         | Darwin-23.5.0
+CMake version            | 3.29.3
+CMake generator          | Unix Makefiles
+Build type               | release
+Configuration time       | 2024-07-17 12:30:06 [UTC]
+Python version           | 3.11.7
+Fortran compiler         | /Users/vanbenschoten/Chemistry/codes/openmpi-5.0.3/openmpi/bin/mpifort
+C compiler               | /Users/vanbenschoten/Chemistry/codes/openmpi-5.0.3/openmpi/bin/mpicc
+DET_SIZE set to          | 64
+POP_SIZE set to          | 64
+dSFMT Mersenne exponent  | 19937
+MPI parallelization      | ON
+MPI launcher             | /Users/vanbenschoten/Chemistry/codes/openmpi-5.0.3/openmpi/bin/mpiexec
+OpenMP parallelization   | ON
+Lua version              | 5.4.6
+HDF5 library version     | 1.14.4-2
+
+Further components
+------------------
+DISABLE_HDF5 not defined.  HDF5 enabled.
+DISABLE_UUID defined.  UUID disabled.
+PARALLEL defined.  MPI parallelization enabled.
+DISABLE_MPI3 not defined.  MPI-3 functionality enabled.
+PARALLEL defined. DISABLE_MPI3 and ENABLE_SHMEM_POSIX not defined. MPI-3 in use.
+DISABLE_SCALAPACK defined.  ScaLAPACK disabled.
+SINGLE_PRECISION not defined.  Double precision used throughout.
+USE_POPCNT not defined. Internal POPCNT procedure used.
+
+Runtime information
+-------------------
+Hostname:
+    Williams-MacBook-Pro.local
+Current working dir:
+    /Users/vanbenschoten/Chemistry/codes/ftCBS-Data/rs001_M00038
+Started running on 09/10/2024 at 11:04:46
+ Calculation UUID: UNKNOWN: UUID GENERATION DISABLED.  .
+ ================================================================
+
+ Input options
+ -------------
+
+for ms = 0, 2, 2 do
+    fci {
+        sys = ueg {
+            nel = 2,
+            ms = ms,
+            sym = 1,
+            dim = 3,
+            cutoff = 1.0,
+            rs = 1.0,
+            use_mom_vec = true,
+        },
+        fci = {
+            determinant_table_only = true,
+        },
+    }
+end
+
+ -------------
+
+ Basis functions
+ ---------------
+
+ Spin given in units of 1/2.
+ k-points given in terms of the reciprocal lattice vectors of the crystal cell.
+
+ index   k-point            ms       <i|f|i>
+     1   (  0,  0,  0)      1        0.00000000E+00
+     2   (  0,  0,  0)     -1        0.00000000E+00
+     3   (  0,  0, -1)      1        4.78539000E+00
+     4   (  0,  0, -1)     -1        4.78539000E+00
+     5   (  0, -1,  0)      1        4.78539000E+00
+     6   (  0, -1,  0)     -1        4.78539000E+00
+     7   ( -1,  0,  0)      1        4.78539000E+00
+     8   ( -1,  0,  0)     -1        4.78539000E+00
+     9   (  1,  0,  0)      1        4.78539000E+00
+    10   (  1,  0,  0)     -1        4.78539000E+00
+    11   (  0,  1,  0)      1        4.78539000E+00
+    12   (  0,  1,  0)     -1        4.78539000E+00
+    13   (  0,  0,  1)      1        4.78539000E+00
+    14   (  0,  0,  1)     -1        4.78539000E+00
+    15   (  0, -1, -1)      1        9.57078000E+00
+    16   (  0, -1, -1)     -1        9.57078000E+00
+    17   ( -1,  0, -1)      1        9.57078000E+00
+    18   ( -1,  0, -1)     -1        9.57078000E+00
+    19   (  1,  0, -1)      1        9.57078000E+00
+    20   (  1,  0, -1)     -1        9.57078000E+00
+    21   (  0,  1, -1)      1        9.57078000E+00
+    22   (  0,  1, -1)     -1        9.57078000E+00
+    23   ( -1, -1,  0)      1        9.57078000E+00
+    24   ( -1, -1,  0)     -1        9.57078000E+00
+    25   (  1, -1,  0)      1        9.57078000E+00
+    26   (  1, -1,  0)     -1        9.57078000E+00
+    27   ( -1,  1,  0)      1        9.57078000E+00
+    28   ( -1,  1,  0)     -1        9.57078000E+00
+    29   (  1,  1,  0)      1        9.57078000E+00
+    30   (  1,  1,  0)     -1        9.57078000E+00
+    31   (  0, -1,  1)      1        9.57078000E+00
+    32   (  0, -1,  1)     -1        9.57078000E+00
+    33   ( -1,  0,  1)      1        9.57078000E+00
+    34   ( -1,  0,  1)     -1        9.57078000E+00
+    35   (  1,  0,  1)      1        9.57078000E+00
+    36   (  1,  0,  1)     -1        9.57078000E+00
+    37   (  0,  1,  1)      1        9.57078000E+00
+    38   (  0,  1,  1)     -1        9.57078000E+00
+
+ Number of electrons: 2
+ Number of basis functions: 38
+
+ Bit-length of integers used to store determinant bit-strings: 64
+ Number of integers used to store determinant bit-strings: 1
+
+ FCI
+ ---
+
+ -- Start JSON block --
+ {
+     "system": {
+         "nbasis": 38,   
+         "nel": 2,   
+         "nvirt": 36,   
+         "Ms": 0,   
+         "nalpha": 1,   
+         "nbeta": 1,   
+         "nvirt_alpha": 18,   
+         "nvirt_beta": 18,   
+         "nsym": 19,   
+         "sym0": 1,   
+         "sym_max": 19,   
+         "nsym_tot": 19,   
+         "sym0_tot": 1,   
+         "sym_max_tot": 19,   
+         "symmetry": 1,   
+         "tot_sym": false,   
+         "aufbau_sym": false,   
+         "max_number_excitations": 2,   
+         "ueg": {
+             "r_s": 1.00000000,   
+             "ecutoff": 1.00000000,   
+             "k_fermi": 1.91915829,   
+             "E_fermi": 1.84158428,   
+             "ktwist": [0.00000000E+000,0.00000000E+000,0.00000000E+000],
+             "L": [2.03098260,2.03098260,2.03098260],
+             "use_mom_vec": true    
+         }
+     },
+     "fci_in": {
+         "write_hamiltonian": false,   
+         "hamiltonian_file":  "HAMIL",   
+         "write_determinants": false,   
+         "determinant_file":  "DETS",   
+         "print_fci_wfn": 0,   
+         "print_fci_wfn_file":  "FCI_WFN",   
+         "analyse_fci_wfn": 0,   
+         "block_size": 64,   
+         "ndavidson_eigv": 4,   
+         "ndavidson_trialvec": 8,   
+         "davidson_maxsize": 50,   
+         "davidson_tol": 1.00000001E-007,   
+         "hamiltonian_diagonal_only": false,   
+         "determinant_table_only": true    
+     },
+     "reference": {
+         "ex_level": 2    
+     }
+ }
+ -- End JSON block --
+
+ The table below gives the number of determinants for each symmetry with Ms=0.
+
+ Symmetry index     Momentum vector        # dets
+              1    (   0,   0,   0)            19
+              2    (   0,   0,   1)            10
+              3    (   0,   1,   0)            10
+              4    (   1,   0,   0)            10
+              5    (  -1,   0,   0)            10
+              6    (   0,  -1,   0)            10
+              7    (   0,   0,  -1)            10
+              8    (   0,   1,   1)             8
+              9    (   1,   0,   1)             8
+             10    (  -1,   0,   1)             8
+             11    (   0,  -1,   1)             8
+             12    (   1,   1,   0)             8
+             13    (  -1,   1,   0)             8
+             14    (   1,  -1,   0)             8
+             15    (  -1,  -1,   0)             8
+             16    (   0,   1,  -1)             8
+             17    (   1,   0,  -1)             8
+             18    (  -1,   0,  -1)             8
+             19    (   0,  -1,  -1)             8
+             20    (   1,   1,   1)             6
+             21    (  -1,   1,   1)             6
+             22    (   1,  -1,   1)             6
+             23    (  -1,  -1,   1)             6
+             24    (   1,   1,  -1)             6
+             25    (  -1,   1,  -1)             6
+             26    (   1,  -1,  -1)             6
+             27    (  -1,  -1,  -1)             6
+             28    (   0,   0,   2)             5
+             29    (   0,   2,   0)             5
+             30    (   2,   0,   0)             5
+             31    (  -2,   0,   0)             5
+             32    (   0,  -2,   0)             5
+             33    (   0,   0,  -2)             5
+             34    (   1,   1,   2)             2
+             35    (  -1,   1,   2)             2
+             36    (   1,  -1,   2)             2
+             37    (  -1,  -1,   2)             2
+             38    (   1,   2,   1)             2
+             39    (   2,   1,   1)             2
+             40    (  -1,   2,   1)             2
+             41    (  -2,   1,   1)             2
+             42    (   2,  -1,   1)             2
+             43    (   1,  -2,   1)             2
+             44    (  -2,  -1,   1)             2
+             45    (  -1,  -2,   1)             2
+             46    (   1,   2,  -1)             2
+             47    (  -1,   2,  -1)             2
+             48    (   2,   1,  -1)             2
+             49    (   2,  -1,  -1)             2
+             50    (   1,   1,  -2)             2
+             51    (  -2,   1,  -1)             2
+             52    (  -2,  -1,  -1)             2
+             53    (  -1,   1,  -2)             2
+             54    (   1,  -2,  -1)             2
+             55    (  -1,  -2,  -1)             2
+             56    (   1,  -1,  -2)             2
+             57    (  -1,  -1,  -2)             2
+             58    (   0,   1,   2)             2
+             59    (   1,   0,   2)             2
+             60    (  -1,   0,   2)             2
+             61    (   0,  -1,   2)             2
+             62    (   0,   2,   1)             2
+             63    (   1,   2,   0)             2
+             64    (  -1,   2,   0)             2
+             65    (   0,   2,  -1)             2
+             66    (   2,   0,   1)             2
+             67    (   2,   1,   0)             2
+             68    (   2,  -1,   0)             2
+             69    (   2,   0,  -1)             2
+             70    (  -2,   0,   1)             2
+             71    (  -2,   1,   0)             2
+             72    (  -2,  -1,   0)             2
+             73    (  -2,   0,  -1)             2
+             74    (   0,  -2,   1)             2
+             75    (   1,  -2,   0)             2
+             76    (  -1,  -2,   0)             2
+             77    (   0,  -2,  -1)             2
+             78    (   0,   1,  -2)             2
+             79    (   1,   0,  -2)             2
+             80    (  -1,   0,  -2)             2
+             81    (   0,  -1,  -2)             2
+             82    (   0,   2,   2)             1
+             83    (   2,   0,   2)             1
+             84    (  -2,   0,   2)             1
+             85    (   0,  -2,   2)             1
+             86    (   2,   2,   0)             1
+             87    (  -2,   2,   0)             1
+             88    (   2,  -2,   0)             1
+             89    (  -2,  -2,   0)             1
+             90    (   0,   2,  -2)             1
+             91    (   2,   0,  -2)             1
+             92    (  -2,   0,  -2)             1
+             93    (   0,  -2,  -2)             1
+
+ # Total symmetries:          93
+
+ Basis functions
+ ---------------
+
+ Spin given in units of 1/2.
+ k-points given in terms of the reciprocal lattice vectors of the crystal cell.
+
+ index   k-point            ms       <i|f|i>
+     1   (  0,  0,  0)      1        0.00000000E+00
+     2   (  0,  0,  0)     -1        0.00000000E+00
+     3   (  0,  0, -1)      1        4.78539000E+00
+     4   (  0,  0, -1)     -1        4.78539000E+00
+     5   (  0, -1,  0)      1        4.78539000E+00
+     6   (  0, -1,  0)     -1        4.78539000E+00
+     7   ( -1,  0,  0)      1        4.78539000E+00
+     8   ( -1,  0,  0)     -1        4.78539000E+00
+     9   (  1,  0,  0)      1        4.78539000E+00
+    10   (  1,  0,  0)     -1        4.78539000E+00
+    11   (  0,  1,  0)      1        4.78539000E+00
+    12   (  0,  1,  0)     -1        4.78539000E+00
+    13   (  0,  0,  1)      1        4.78539000E+00
+    14   (  0,  0,  1)     -1        4.78539000E+00
+    15   (  0, -1, -1)      1        9.57078000E+00
+    16   (  0, -1, -1)     -1        9.57078000E+00
+    17   ( -1,  0, -1)      1        9.57078000E+00
+    18   ( -1,  0, -1)     -1        9.57078000E+00
+    19   (  1,  0, -1)      1        9.57078000E+00
+    20   (  1,  0, -1)     -1        9.57078000E+00
+    21   (  0,  1, -1)      1        9.57078000E+00
+    22   (  0,  1, -1)     -1        9.57078000E+00
+    23   ( -1, -1,  0)      1        9.57078000E+00
+    24   ( -1, -1,  0)     -1        9.57078000E+00
+    25   (  1, -1,  0)      1        9.57078000E+00
+    26   (  1, -1,  0)     -1        9.57078000E+00
+    27   ( -1,  1,  0)      1        9.57078000E+00
+    28   ( -1,  1,  0)     -1        9.57078000E+00
+    29   (  1,  1,  0)      1        9.57078000E+00
+    30   (  1,  1,  0)     -1        9.57078000E+00
+    31   (  0, -1,  1)      1        9.57078000E+00
+    32   (  0, -1,  1)     -1        9.57078000E+00
+    33   ( -1,  0,  1)      1        9.57078000E+00
+    34   ( -1,  0,  1)     -1        9.57078000E+00
+    35   (  1,  0,  1)      1        9.57078000E+00
+    36   (  1,  0,  1)     -1        9.57078000E+00
+    37   (  0,  1,  1)      1        9.57078000E+00
+    38   (  0,  1,  1)     -1        9.57078000E+00
+
+ Number of electrons: 2
+ Number of basis functions: 38
+
+ Bit-length of integers used to store determinant bit-strings: 64
+ Number of integers used to store determinant bit-strings: 1
+
+ FCI
+ ---
+
+ -- Start JSON block --
+ {
+     "system": {
+         "nbasis": 38,   
+         "nel": 2,   
+         "nvirt": 36,   
+         "Ms": 2,   
+         "nalpha": 2,   
+         "nbeta": 0,   
+         "nvirt_alpha": 17,   
+         "nvirt_beta": 19,   
+         "nsym": 19,   
+         "sym0": 1,   
+         "sym_max": 19,   
+         "nsym_tot": 19,   
+         "sym0_tot": 1,   
+         "sym_max_tot": 19,   
+         "symmetry": 1,   
+         "tot_sym": false,   
+         "aufbau_sym": false,   
+         "max_number_excitations": 2,   
+         "ueg": {
+             "r_s": 1.00000000,   
+             "ecutoff": 1.00000000,   
+             "k_fermi": 2.41798793,   
+             "E_fermi": 2.92333282,   
+             "ktwist": [0.00000000E+000,0.00000000E+000,0.00000000E+000],
+             "L": [2.03098260,2.03098260,2.03098260],
+             "use_mom_vec": true    
+         }
+     },
+     "fci_in": {
+         "write_hamiltonian": false,   
+         "hamiltonian_file":  "HAMIL",   
+         "write_determinants": false,   
+         "determinant_file":  "DETS",   
+         "print_fci_wfn": 0,   
+         "print_fci_wfn_file":  "FCI_WFN",   
+         "analyse_fci_wfn": 0,   
+         "block_size": 64,   
+         "ndavidson_eigv": 4,   
+         "ndavidson_trialvec": 8,   
+         "davidson_maxsize": 50,   
+         "davidson_tol": 1.00000001E-007,   
+         "hamiltonian_diagonal_only": false,   
+         "determinant_table_only": true    
+     },
+     "reference": {
+         "ex_level": 2    
+     }
+ }
+ -- End JSON block --
+
+ The table below gives the number of determinants for each symmetry with Ms=2.
+
+ Symmetry index     Momentum vector        # dets
+              1    (   0,   0,   0)             9
+              2    (   0,   0,   1)             5
+              3    (   0,   1,   0)             5
+              4    (   1,   0,   0)             5
+              5    (  -1,   0,   0)             5
+              6    (   0,  -1,   0)             5
+              7    (   0,   0,  -1)             5
+              8    (   0,   1,   1)             4
+              9    (   1,   0,   1)             4
+             10    (  -1,   0,   1)             4
+             11    (   0,  -1,   1)             4
+             12    (   1,   1,   0)             4
+             13    (  -1,   1,   0)             4
+             14    (   1,  -1,   0)             4
+             15    (  -1,  -1,   0)             4
+             16    (   0,   1,  -1)             4
+             17    (   1,   0,  -1)             4
+             18    (  -1,   0,  -1)             4
+             19    (   0,  -1,  -1)             4
+             20    (   1,   1,   1)             3
+             21    (  -1,   1,   1)             3
+             22    (   1,  -1,   1)             3
+             23    (  -1,  -1,   1)             3
+             24    (   1,   1,  -1)             3
+             25    (  -1,   1,  -1)             3
+             26    (   1,  -1,  -1)             3
+             27    (  -1,  -1,  -1)             3
+             28    (   0,   0,   2)             2
+             29    (   0,   2,   0)             2
+             30    (   2,   0,   0)             2
+             31    (  -2,   0,   0)             2
+             32    (   0,  -2,   0)             2
+             33    (   0,   0,  -2)             2
+             34    (   1,   1,   2)             1
+             35    (  -1,   1,   2)             1
+             36    (   1,  -1,   2)             1
+             37    (  -1,  -1,   2)             1
+             38    (   1,   2,   1)             1
+             39    (   2,   1,   1)             1
+             40    (  -1,   2,   1)             1
+             41    (  -2,   1,   1)             1
+             42    (   2,  -1,   1)             1
+             43    (   1,  -2,   1)             1
+             44    (  -2,  -1,   1)             1
+             45    (  -1,  -2,   1)             1
+             46    (   1,   2,  -1)             1
+             47    (  -1,   2,  -1)             1
+             48    (   2,   1,  -1)             1
+             49    (   2,  -1,  -1)             1
+             50    (   1,   1,  -2)             1
+             51    (  -2,   1,  -1)             1
+             52    (  -2,  -1,  -1)             1
+             53    (  -1,   1,  -2)             1
+             54    (   1,  -2,  -1)             1
+             55    (  -1,  -2,  -1)             1
+             56    (   1,  -1,  -2)             1
+             57    (  -1,  -1,  -2)             1
+             58    (   0,   1,   2)             1
+             59    (   1,   0,   2)             1
+             60    (  -1,   0,   2)             1
+             61    (   0,  -1,   2)             1
+             62    (   0,   2,   1)             1
+             63    (   1,   2,   0)             1
+             64    (  -1,   2,   0)             1
+             65    (   0,   2,  -1)             1
+             66    (   2,   0,   1)             1
+             67    (   2,   1,   0)             1
+             68    (   2,  -1,   0)             1
+             69    (   2,   0,  -1)             1
+             70    (  -2,   0,   1)             1
+             71    (  -2,   1,   0)             1
+             72    (  -2,  -1,   0)             1
+             73    (  -2,   0,  -1)             1
+             74    (   0,  -2,   1)             1
+             75    (   1,  -2,   0)             1
+             76    (  -1,  -2,   0)             1
+             77    (   0,  -2,  -1)             1
+             78    (   0,   1,  -2)             1
+             79    (   1,   0,  -2)             1
+             80    (  -1,   0,  -2)             1
+             81    (   0,  -1,  -2)             1
+
+ # Total symmetries:          81
+
+ Timing breakdown
+ ----------------
+
+ Wall time for each calculation section (seconds):
+
+ UEG initialisation: .00
+ FCI calculation   : .00
+ UEG initialisation: .00
+ FCI calculation   : .00
+
+ ================================================================
+ Finished running on 09/10/2024 at 11:04:46
+ Wall time (seconds):                               0.00
+ CPU time (per processor, seconds):                 0.00
+ ================================================================
+

@@ -1,0 +1,593 @@
+
+   HANDE
+
+ ================================================================
+Version information
+-------------------
+Version       | v1.6-6-g22d1826
+Commit hash   | 22d1826c7080cbc9595b5bab6336d80872aef478
+Commit author | Andreea Filip
+Commit date   | Tue Jun 21 10:42:36 2022 +0100
+Branch        | main
+
+Configuration and build information
+-----------------------------------
+Who compiled             | vanbenschoten
+Compilation hostname     | argon-login-2.hpc
+Operating system         | Linux-3.10.0-1160.62.1.el7.x86_64
+CMake version            | 3.20.0
+CMake generator          | Unix Makefiles
+Build type               | release
+Configuration time       | 2022-06-27 00:17:20 [UTC]
+Python version           | 3.8.8
+Fortran compiler         | /usr/share/apps/2021.1/arch/intel-2021.2.0/openmpi-4.0.5/bin/mpif90
+C compiler               | /usr/share/apps/2021.1/arch/intel-2021.2.0/openmpi-4.0.5/bin/mpicc
+DET_SIZE set to          | 64
+POP_SIZE set to          | 64
+dSFMT Mersenne exponent  | 19937
+MPI parallelization      | ON
+MPI launcher             | /usr/share/apps/2021.1/arch/intel-2021.2.0/openmpi-4.0.5/bin/mpiexec
+OpenMP parallelization   | ON
+Lua version              | 5.3.5
+HDF5 library version     | 1.10.7
+
+Further components
+------------------
+DISABLE_HDF5 not defined.  HDF5 enabled.
+DISABLE_UUID not defined.  UUID enabled.
+PARALLEL defined.  MPI parallelization enabled.
+DISABLE_MPI3 not defined.  MPI-3 functionality enabled.
+PARALLEL defined. DISABLE_MPI3 and ENABLE_SHMEM_POSIX not defined. MPI-3 in use.
+DISABLE_SCALAPACK not defined.  ScaLAPACK enabled.
+SINGLE_PRECISION not defined.  Double precision used throughout.
+USE_POPCNT not defined. Internal POPCNT procedure used.
+
+Runtime information
+-------------------
+Hostname:
+    argon-lc-i18-30.hpc
+Current working dir:
+    /Shared/informatics_vasp_jshepherd/Users/vanbenschoten/he_atom_pbc/8x8x8/0001-HeATOM-M0018
+Started running on 28/03/2024 at 12:52:30
+ Calculation UUID: ffec97c9-2a16-447c-98ca-daff81ca6696.
+ ================================================================
+
+ Input options
+ -------------
+
+for nalpha = 0, 2, 1 do
+    nbeta = 2 - nalpha
+    ims = nalpha - nbeta
+    fci {
+        sys = read_in {
+            int_file = 'FCIDUMP',
+            complex = true,
+            electrons = 2,
+            ms = ims,
+        },
+    }
+end
+
+ -------------
+
+ WARNING: overriding the number of electrons in FCIDUMP file: FCIDUMP.
+ FCIDUMP file indicates 2 electrons.
+ Input file set 2 electrons.
+
+ Memory required for all two body integrals (MB) on each processor: 0
+ It is left to the user to ensure that this does not exceed available resources.
+
+ Basis functions
+ ---------------
+
+ Spin given in units of 1/2.
+ k-points given in terms of the reciprocal lattice vectors of the crystal cell.
+
+ index   k-point            ms       <i|f|i>
+     1   (  0,  0,  0)      1       -9.58944306E-01
+     2   (  0,  0,  0)     -1       -9.58944306E-01
+     3   (  0,  0,  0)      1        1.43796948E-01
+     4   (  0,  0,  0)     -1        1.43796948E-01
+     5   (  0,  0,  0)      1        5.98489329E-01
+     6   (  0,  0,  0)     -1        5.98489329E-01
+     7   (  0,  0,  0)      1        5.98489329E-01
+     8   (  0,  0,  0)     -1        5.98489329E-01
+     9   (  0,  0,  0)      1        5.98489329E-01
+    10   (  0,  0,  0)     -1        5.98489329E-01
+    11   (  0,  0,  0)      1        6.28849900E-01
+    12   (  0,  0,  0)     -1        6.28849900E-01
+    13   (  0,  0,  0)      1        6.28849900E-01
+    14   (  0,  0,  0)     -1        6.28849900E-01
+    15   (  0,  0,  0)      1        8.97501151E-01
+    16   (  0,  0,  0)     -1        8.97501151E-01
+    17   (  0,  0,  0)      1        1.17671283E+00
+    18   (  0,  0,  0)     -1        1.17671283E+00
+
+ E_core =    0.000000000000
+ Number of electrons: 2
+ Number of basis functions: 18
+
+ Bit-length of integers used to store determinant bit-strings: 64
+ Number of integers used to store determinant bit-strings: 1
+
+ Symmetry information
+ --------------------
+
+ The table below gives the label and inverse of each wavevector.
+
+ Index    k-point         Inverse
+   1      (  0,  0,  0)        1
+
+ The matrix below gives the result of k_i+k_j to within a reciprocal lattice vector.
+
+  1
+
+ FCI
+ ---
+
+ -- Start JSON block --
+ {
+     "system": {
+         "nbasis": 18,   
+         "nel": 2,   
+         "nvirt": 16,   
+         "Ms": -2,   
+         "nalpha": 0,   
+         "nbeta": 2,   
+         "nvirt_alpha": 9,   
+         "nvirt_beta": 7,   
+         "nsym": 1,   
+         "sym0": 1,   
+         "sym_max": 1,   
+         "nsym_tot": 1,   
+         "sym0_tot": 1,   
+         "sym_max_tot": 1,   
+         "symmetry": 1,   
+         "tot_sym": false,   
+         "aufbau_sym": true,   
+         "max_number_excitations": 2,   
+         "read_in": {
+             "int_file":  "FCIDUMP",   
+             "uhf": false,   
+             "Ecore": 0.00000000,   
+             "CAS": [ -1, -1],
+             "useLz": false,   
+             "complex": true    
+         }
+     },
+     "fci_in": {
+         "write_hamiltonian": false,   
+         "hamiltonian_file":  "HAMIL",   
+         "write_determinants": false,   
+         "determinant_file":  "DETS",   
+         "print_fci_wfn": 0,   
+         "print_fci_wfn_file":  "FCI_WFN",   
+         "analyse_fci_wfn": 0,   
+         "block_size": 64,   
+         "ndavidson_eigv": 4,   
+         "ndavidson_trialvec": 8,   
+         "davidson_maxsize": 50,   
+         "davidson_tol": 0.00000010,   
+         "hamiltonian_diagonal_only": false,   
+     },
+     "reference": {
+         "ex_level": 2    
+     }
+ }
+ -- End JSON block --
+
+ The table below gives the number of determinants for each symmetry with Ms=-2.
+
+ Symmetry index      # dets
+         1               36
+
+ Performing exact diagonalisation...
+
+ LAPACK diagonalisation results
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  State     Energy
+      1    -2.356800730873
+      2    -1.926156186067
+      3    -1.912762194491
+      4    -1.912760292604
+      5    -1.845434759577
+      6    -1.845430692320
+      7    -1.593540112858
+      8    -1.351102111982
+      9    -0.812423096182
+     10    -0.772746414918
+     11    -0.772510252241
+     12    -0.685563638252
+     13    -0.685436054001
+     14    -0.397263590492
+     15    -0.383418483494
+     16    -0.382488710542
+     17    -0.341702071553
+     18    -0.289467174385
+     19    -0.285159008981
+     20    -0.246229496212
+     21    -0.243478872702
+     22    -0.239202030601
+     23    -0.237092885059
+     24    -0.176441982648
+     25    -0.149139319397
+     26    -0.027897741460
+     27     0.030444986411
+     28     0.030691950979
+     29     0.121696057436
+     30     0.121710100589
+     31     0.171012335950
+     32     0.234581336168
+     33     0.242549118817
+     34     0.332017815975
+     35     0.334238184976
+     36     0.622456373244
+
+ Memory required for all two body integrals (MB) on each processor: 0
+ It is left to the user to ensure that this does not exceed available resources.
+
+ Basis functions
+ ---------------
+
+ Spin given in units of 1/2.
+ k-points given in terms of the reciprocal lattice vectors of the crystal cell.
+
+ index   k-point            ms       <i|f|i>
+     1   (  0,  0,  0)      1       -9.58944306E-01
+     2   (  0,  0,  0)     -1       -9.58944306E-01
+     3   (  0,  0,  0)      1        1.43796948E-01
+     4   (  0,  0,  0)     -1        1.43796948E-01
+     5   (  0,  0,  0)      1        5.98489329E-01
+     6   (  0,  0,  0)     -1        5.98489329E-01
+     7   (  0,  0,  0)      1        5.98489329E-01
+     8   (  0,  0,  0)     -1        5.98489329E-01
+     9   (  0,  0,  0)      1        5.98489329E-01
+    10   (  0,  0,  0)     -1        5.98489329E-01
+    11   (  0,  0,  0)      1        6.28849900E-01
+    12   (  0,  0,  0)     -1        6.28849900E-01
+    13   (  0,  0,  0)      1        6.28849900E-01
+    14   (  0,  0,  0)     -1        6.28849900E-01
+    15   (  0,  0,  0)      1        8.97501151E-01
+    16   (  0,  0,  0)     -1        8.97501151E-01
+    17   (  0,  0,  0)      1        1.17671283E+00
+    18   (  0,  0,  0)     -1        1.17671283E+00
+
+ E_core =    0.000000000000
+ Number of electrons: 2
+ Number of basis functions: 18
+
+ Bit-length of integers used to store determinant bit-strings: 64
+ Number of integers used to store determinant bit-strings: 1
+
+ Symmetry information
+ --------------------
+
+ The table below gives the label and inverse of each wavevector.
+
+ Index    k-point         Inverse
+   1      (  0,  0,  0)        1
+
+ The matrix below gives the result of k_i+k_j to within a reciprocal lattice vector.
+
+  1
+
+ FCI
+ ---
+
+ -- Start JSON block --
+ {
+     "system": {
+         "nbasis": 18,   
+         "nel": 2,   
+         "nvirt": 16,   
+         "Ms": 0,   
+         "nalpha": 1,   
+         "nbeta": 1,   
+         "nvirt_alpha": 8,   
+         "nvirt_beta": 8,   
+         "nsym": 1,   
+         "sym0": 1,   
+         "sym_max": 1,   
+         "nsym_tot": 1,   
+         "sym0_tot": 1,   
+         "sym_max_tot": 1,   
+         "symmetry": 1,   
+         "tot_sym": false,   
+         "aufbau_sym": true,   
+         "max_number_excitations": 2,   
+         "read_in": {
+             "int_file":  "FCIDUMP",   
+             "uhf": false,   
+             "Ecore": 0.00000000,   
+             "CAS": [ -1, -1],
+             "useLz": false,   
+             "complex": true    
+         }
+     },
+     "fci_in": {
+         "write_hamiltonian": false,   
+         "hamiltonian_file":  "HAMIL",   
+         "write_determinants": false,   
+         "determinant_file":  "DETS",   
+         "print_fci_wfn": 0,   
+         "print_fci_wfn_file":  "FCI_WFN",   
+         "analyse_fci_wfn": 0,   
+         "block_size": 64,   
+         "ndavidson_eigv": 4,   
+         "ndavidson_trialvec": 8,   
+         "davidson_maxsize": 50,   
+         "davidson_tol": 0.00000010,   
+         "hamiltonian_diagonal_only": false,   
+     },
+     "reference": {
+         "ex_level": 2    
+     }
+ }
+ -- End JSON block --
+
+ The table below gives the number of determinants for each symmetry with Ms=0.
+
+ Symmetry index      # dets
+         1               81
+
+ Performing exact diagonalisation...
+
+ LAPACK diagonalisation results
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  State     Energy
+      1    -2.927906453202
+      2    -2.356800730873
+      3    -2.260449725627
+      4    -1.926156186067
+      5    -1.912762194491
+      6    -1.912760292604
+      7    -1.874651124564
+      8    -1.872764103645
+      9    -1.872681833656
+     10    -1.845434759577
+     11    -1.845430692320
+     12    -1.840109293835
+     13    -1.839865939552
+     14    -1.593540112858
+     15    -1.525967734811
+     16    -1.351102111982
+     17    -1.293591468370
+     18    -1.141943202289
+     19    -0.812423096182
+     20    -0.772746414918
+     21    -0.772510252241
+     22    -0.740522497538
+     23    -0.685563638252
+     24    -0.685436054001
+     25    -0.679091048006
+     26    -0.677744414756
+     27    -0.563737356177
+     28    -0.562425980515
+     29    -0.397263590492
+     30    -0.383735107184
+     31    -0.383418483494
+     32    -0.382488710542
+     33    -0.357211096972
+     34    -0.341702071553
+     35    -0.328972019149
+     36    -0.318884930300
+     37    -0.308819629355
+     38    -0.289467174385
+     39    -0.288110929827
+     40    -0.285159008981
+     41    -0.273441657888
+     42    -0.254662760273
+     43    -0.249053783965
+     44    -0.246229496212
+     45    -0.243478872702
+     46    -0.239202030601
+     47    -0.237092885059
+     48    -0.222718476023
+     49    -0.206647579577
+     50    -0.197461896005
+     51    -0.193753417470
+     52    -0.176441982648
+     53    -0.149139319397
+     54    -0.117990447410
+     55    -0.111715623354
+     56    -0.111322329231
+     57    -0.045573976795
+     58    -0.027897741460
+     59     0.021218854303
+     60     0.030444986411
+     61     0.030691950979
+     62     0.063196657879
+     63     0.063198995170
+     64     0.121696057436
+     65     0.121710100589
+     66     0.156073240783
+     67     0.158150604051
+     68     0.171012335950
+     69     0.234581336168
+     70     0.242549118817
+     71     0.252134563571
+     72     0.267685629605
+     73     0.286042985041
+     74     0.332017815975
+     75     0.334238184976
+     76     0.356855402553
+     77     0.376877914135
+     78     0.522877641611
+     79     0.622456373244
+     80     0.711983442381
+     81     0.875279015969
+
+ WARNING: overriding the number of electrons in FCIDUMP file: FCIDUMP.
+ FCIDUMP file indicates 2 electrons.
+ Input file set 2 electrons.
+
+ Memory required for all two body integrals (MB) on each processor: 0
+ It is left to the user to ensure that this does not exceed available resources.
+
+ Basis functions
+ ---------------
+
+ Spin given in units of 1/2.
+ k-points given in terms of the reciprocal lattice vectors of the crystal cell.
+
+ index   k-point            ms       <i|f|i>
+     1   (  0,  0,  0)      1       -9.58944306E-01
+     2   (  0,  0,  0)     -1       -9.58944306E-01
+     3   (  0,  0,  0)      1        1.43796948E-01
+     4   (  0,  0,  0)     -1        1.43796948E-01
+     5   (  0,  0,  0)      1        5.98489329E-01
+     6   (  0,  0,  0)     -1        5.98489329E-01
+     7   (  0,  0,  0)      1        5.98489329E-01
+     8   (  0,  0,  0)     -1        5.98489329E-01
+     9   (  0,  0,  0)      1        5.98489329E-01
+    10   (  0,  0,  0)     -1        5.98489329E-01
+    11   (  0,  0,  0)      1        6.28849900E-01
+    12   (  0,  0,  0)     -1        6.28849900E-01
+    13   (  0,  0,  0)      1        6.28849900E-01
+    14   (  0,  0,  0)     -1        6.28849900E-01
+    15   (  0,  0,  0)      1        8.97501151E-01
+    16   (  0,  0,  0)     -1        8.97501151E-01
+    17   (  0,  0,  0)      1        1.17671283E+00
+    18   (  0,  0,  0)     -1        1.17671283E+00
+
+ E_core =    0.000000000000
+ Number of electrons: 2
+ Number of basis functions: 18
+
+ Bit-length of integers used to store determinant bit-strings: 64
+ Number of integers used to store determinant bit-strings: 1
+
+ Symmetry information
+ --------------------
+
+ The table below gives the label and inverse of each wavevector.
+
+ Index    k-point         Inverse
+   1      (  0,  0,  0)        1
+
+ The matrix below gives the result of k_i+k_j to within a reciprocal lattice vector.
+
+  1
+
+ FCI
+ ---
+
+ -- Start JSON block --
+ {
+     "system": {
+         "nbasis": 18,   
+         "nel": 2,   
+         "nvirt": 16,   
+         "Ms": 2,   
+         "nalpha": 2,   
+         "nbeta": 0,   
+         "nvirt_alpha": 7,   
+         "nvirt_beta": 9,   
+         "nsym": 1,   
+         "sym0": 1,   
+         "sym_max": 1,   
+         "nsym_tot": 1,   
+         "sym0_tot": 1,   
+         "sym_max_tot": 1,   
+         "symmetry": 1,   
+         "tot_sym": false,   
+         "aufbau_sym": true,   
+         "max_number_excitations": 2,   
+         "read_in": {
+             "int_file":  "FCIDUMP",   
+             "uhf": false,   
+             "Ecore": 0.00000000,   
+             "CAS": [ -1, -1],
+             "useLz": false,   
+             "complex": true    
+         }
+     },
+     "fci_in": {
+         "write_hamiltonian": false,   
+         "hamiltonian_file":  "HAMIL",   
+         "write_determinants": false,   
+         "determinant_file":  "DETS",   
+         "print_fci_wfn": 0,   
+         "print_fci_wfn_file":  "FCI_WFN",   
+         "analyse_fci_wfn": 0,   
+         "block_size": 64,   
+         "ndavidson_eigv": 4,   
+         "ndavidson_trialvec": 8,   
+         "davidson_maxsize": 50,   
+         "davidson_tol": 0.00000010,   
+         "hamiltonian_diagonal_only": false,   
+     },
+     "reference": {
+         "ex_level": 2    
+     }
+ }
+ -- End JSON block --
+
+ The table below gives the number of determinants for each symmetry with Ms=2.
+
+ Symmetry index      # dets
+         1               36
+
+ Performing exact diagonalisation...
+
+ LAPACK diagonalisation results
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  State     Energy
+      1    -2.356800730873
+      2    -1.926156186067
+      3    -1.912762194491
+      4    -1.912760292604
+      5    -1.845434759577
+      6    -1.845430692320
+      7    -1.593540112858
+      8    -1.351102111982
+      9    -0.812423096182
+     10    -0.772746414918
+     11    -0.772510252241
+     12    -0.685563638252
+     13    -0.685436054001
+     14    -0.397263590492
+     15    -0.383418483494
+     16    -0.382488710542
+     17    -0.341702071553
+     18    -0.289467174385
+     19    -0.285159008981
+     20    -0.246229496212
+     21    -0.243478872702
+     22    -0.239202030601
+     23    -0.237092885059
+     24    -0.176441982648
+     25    -0.149139319397
+     26    -0.027897741460
+     27     0.030444986411
+     28     0.030691950979
+     29     0.121696057436
+     30     0.121710100589
+     31     0.171012335950
+     32     0.234581336168
+     33     0.242549118817
+     34     0.332017815975
+     35     0.334238184976
+     36     0.622456373244
+
+ Timing breakdown
+ ----------------
+
+ Wall time for each calculation section (seconds):
+
+ Generic system initialisation: .01
+ FCI calculation              : .01
+ Generic system initialisation: .01
+ FCI calculation              : .00
+ Generic system initialisation: .01
+ FCI calculation              : .00
+
+ ================================================================
+ Finished running on 28/03/2024 at 12:52:30
+ Wall time (seconds):                               0.17
+ CPU time (per processor, seconds):                 0.04
+ ================================================================
+
